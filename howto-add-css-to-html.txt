@@ -1,0 +1,22 @@
+There are three methods to add CSS to HTML.  The first is external CSS.
+
+External CSS
+Most common method, links separate CSS file to HTML file.
+<head>
+    <link rel="stylesheet" href="styles.css">
+</head>
+Here are the steps to adding external CSS:
+    * add a void <link> element to the head of the HTML file.
+    * the "href" attribute is a link to the CSS file, either absolute or relative.  The above example assumes that the 
+      file "styles.css" is in the same directory as the HTML file.
+    * the "rel" attribute is required and specifies the relationship between the HTML file and the linked file.
+
+
+Internal CSS
+This involves adding the CSS directly in the HTML file itself.  The code is placed inside <style> tags, which is inside 
+of the <head> tag.  This does not require a <link> element.  Besides these differences, syntax is exactly the same as 
+external CSS.  This is useful for styling a single webpage.
+
+Inline CSS
+This method adds CSS directly inside of HTML elements using the "style" class and then writing in the desired CSS 
+properties.

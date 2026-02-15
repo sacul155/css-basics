@@ -1,0 +1,52 @@
+Every single thing on a webpage is a rectangular box.  You can illustrate this by adding an outline to the styling of the 
+page.
+    * {
+        outline: 2px solid red;
+    }
+Headings are boxes, so are paragraphs, lists, every item in a list, buttons, and links.
+
+There are many ways to manipulate the size and space between these boxes, including border, margin, and padding.
+    * padding - increases the space between the border of a box and the content inside the box.
+    * margin - increases the space between the borders of a box and the borders of adjacent boxes.
+    * border - adds space between the margin and the padding, essentially creating a visible box outline.
+
+Block and Inline Boxes 
+Boxes have a display property that determine how boxes behave relative to other boxes.  If a box has a display property 
+value of "block", then:
+    *the box breaks onto a new line 
+    *the width and height properties are respected
+    *padding, margin, and border will cause other elements to be pushed away from the box 
+    *if width is not specified, the box will expand to fit the size of its container
+Elements like <p> and <h1> use block as their default outer display.
+If a box has inline as its display property value then:
+    *the box does not break onto a new line 
+    *the width, height, and top and bottom margins will have no effect
+    *top and bottom padding and borders will change the size of the box without affecting the position of surrounding 
+     content, causing things to overlap.
+
+Parts of a box 
+The smaller boxes that make up a block box in CSS are as follows:
+    * content box - area where content is displayed; size it using width and height properties 
+    * padding box - sits around the content as white space; size it using padding and related properties 
+    * border box - wraps content and padding; size it using border and related properties 
+    * margin box - the outermost layer, wraps everything else and the whitespace between the box and other elements; size 
+      it using margin and related properties.
+In the standard box model, when setting width and height property values on a box, it only applies to the content box.
+Padding and borders are added separately to get the full size of the box:
+    .box {
+        height: 150px;
+        width: 350px;
+        margin: 10px;
+        padding: 25px;
+        border: 5px solid black;
+    }
+
+Changing margin values 
+You can alter positioning of boxes by changing each individual margin value with margin-top, margin-bottom, 
+margin-left, and margin-right.
+Margins between different elements do not add, rather they collapse and the one with the larger margin is used.  Padding 
+can be altered the same way.
+
+Border values 
+You can also change the dimensions, width, color, and style of borders by using border-top, border-color,
+border-style, border-width, and any combination of these.

@@ -1,0 +1,43 @@
+The color property sets an element's text color, and the background-color property sets its background color.
+These properties can accept keyword values, or RGB, HEX, and HSL values.  Here are examples for each in code:
+    p {
+        /* hex */
+        color: #1100ff;
+    }
+
+    p {
+        /* rgb */
+        color: rgb(100, 0, 127);
+    }
+
+    p {
+        /* hsl */
+        color: hsl(15, 82%, 56%);
+    }
+Hexadecimal colors are specified with #RRGGBB, with each value being between 00 and FF.  FF is the highest value.
+RGB colors are set with values between 0 and 255 or 0 and 100%.  You can add a fourth number by adding an a to rgb and
+setting that value between 0.0 and 1.0 to change the opacity.
+HSL stands for hue, saturation, and lightness.  Hue is a degree on the color wheel - 0 is red, 120 is green, and 240 is
+blue.  Saturation is a percentage with 0% being gray and 100% being the full color.  Lightness is also a percentage with 
+0% being black and 100% being white.
+
+font-family
+changes the font of specified text and uses either a font family name like "Times New Roman" or a generic
+family name like serif.  Generic names never use quotes.  Including multiple fonts is useful in case a browser cannot
+display a certain font.  The first one listed will be used and if not the following ones are used.
+
+font-size
+sets the size of font.  Ex: font-size: 22px;
+
+font-weight
+sets boldness of text using either a keyword like "bold" or a number between 1 and 1000.  Ex: font-weight: 700;
+
+text-align
+aligns text horizontally within an element.  Use keywords left, center, and right.  Ex: text-align: center;
+
+You can adjust the size of an image using the height and width properties.  If you want adjust the size of an image 
+without losing its proportions, set one or the other to auto.  Ex:
+    img {
+        height: auto;
+        width: 500px;
+    }

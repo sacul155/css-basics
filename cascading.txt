@@ -1,0 +1,19 @@
+Cascading in CSS refers to the order in which rules are applied.  It's important to understand the mechanics of cascading
+so that you know which elements are going to be affected and in what hierarchy they are applied.
+
+Specificity
+More specific CSS declarations take precedence over less specific ones.  The order is:
+    1. Inline styles 
+    2. ID selectors (most specific selector)
+    3. Class selectors
+    4. Type selectors
+A rule with a greater number of selectors takes specificity over a rule with less selectors.
+Combinator symbols do not add to specificity.
+
+Inheritance
+An elements descendants will inherit any rules applied to the parent without it being specified, unless that child 
+element is directly specified in CSS.
+
+Rule Order 
+The last rule that breaks the tie if all other rules have been taken into account is the order rule.  Whichever rule was 
+last stated in CSS is the rule that takes precedence, assuming all other rules have been checked.
