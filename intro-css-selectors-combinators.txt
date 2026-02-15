@@ -1,0 +1,69 @@
+CSS stands for Cascading Style Sheets, and is used collaboratively with HTML to make a webpage's contents more palatable
+to users, i.e. add borders, fonts, layouts, dynamic elements, etc.
+
+At the basic level, CSS is made up of different rules.  So we can think about each different section in a CSS document
+as a separate rule.  Rules are made up of selectors, properties, and values.
+
+A selector is an HTML element to which CSS rules apply.
+
+The universal selector applies to every element in the HTML document.  So if you want a certain rule applied to every
+element in your document, like having everything be a certain color for example, you would use the universal selector
+denoted by an asterisk.
+    * {
+        color: purple;
+    }
+
+Type selectors (aka element selectors) will apply to all elements of the given type.  So say you want to apply a rule to
+all paragraph elements, you would do the following:
+    p {
+        color: white;
+    }
+
+Class selectors apply to all elements labeled with the given class.  So whichever element you apply that attribute to, 
+the corresponding class selector in CSS would be applied to all those elements.  So say you have a <div> element in 
+HTML in the "primary" class, as in <div class="primary">  You would define the selector as follows:
+    .primary {
+        color: red;
+    }
+The key difference between class and type selectors when writing rules for them in CSS is class selectors preceded by a 
+period as shown above.  Class selectors will not work if the first symbol in the name is a number.
+
+You can also add multiple classes to a single element by adding a new class in the same quotation marks as the first one,
+simply separated by a space.  Use hyphens to separate words in class attributes.
+
+ID selectors are similar to class selectors in that they can be applied to individual elements in the opening tag, except
+they are set with "ID" instead of "class".  Note that ID selectors should only be used on one element in the HTML file,
+do not use IDs for multiple elements.
+
+To write an ID selector in CSS, use a pound symbol.
+    #special {
+        background-color: red;
+    }
+
+If you have two groups of elements that share style declarations, we can group them in CSS.  Say you have two classes 
+"alpha" and "beta" that share similar styling.  We'd group them as so:
+    .alpha, .beta {
+        color: black;
+        background-color: white;
+    }
+For any styling that is unique to one or the other classes, you'd write out a separate rule using the same class
+selector and apply those rules.
+
+Chaining selectors can be used to apply rules to elements that have multiple classes.  So if you have an element with 
+class="a b" and another element with class="a c", you can apply a rule to just the first element with chaining like so:
+    .a.b {
+        color: red;
+    }
+The difference here is that there is no space between class selectors, so it only applies to elements with both classes.
+You can also use chaining with a class and ID combo:
+    .a#b {
+        color: green;
+    }
+
+Descendant combinators can be used to apply CSS to elements that are embedded in other elements.  The rule will apply to
+all elements of a certain class if that class has a certain parent class.  Example:
+    .ancestor .child {
+        rule;
+    }
+This rule would apply to all elements if and only if the most nested element has a class "child" and some parent
+"ancestor".
