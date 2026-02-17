@@ -1,0 +1,12 @@
+You can modify how items are aligned inside a container by using alignment properties.
+
+* justify-content - aligns items along the main axis (usually the horizontal axis).  If flex-direction is set to row, the 
+  items move horizontally to achieve the desired alignment.  If set to row, they move vertically.  So whichever axis is 
+  the main axis, justify-content will affect that axis.
+
+* align-items - aligns items along the cross axis.  If flex-direction is set to row, aligns vertically. If set to column,
+  aligns horizontally.
+
+The gap property is another feature of flex that can set space between items.  Simply provide a value in pixels:
+    gap: 10px;
+

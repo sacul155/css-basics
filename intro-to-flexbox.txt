@@ -1,0 +1,20 @@
+* Flexbox is a way to arrange boxes in rows and columns.  These boxes can grow or shrink (flex) based on set rules.
+* A flex container is any element that has display: flex on it.
+* A flex item is any element that lives directly inside of a flex container.
+* An element can be both a flex container AND a flex item.  So you can set the display on a flex item to flex and then use
+  flexbox to arrange its children as well.
+
+Growing and Shrinking
+---------------------
+The flex shorthand
+* The flex declaration is shorthand for three different properties you can set on a flex item.  The properties are:
+    * flex-grow 
+        - applies a growth factor to an item. 1 denotes proportional growth between all items.  If a 2 were set on just 
+          one of the items, it would grow 2x as much as the others.
+    * flex-shrink 
+    * flex-basis
+* So for the following CSS, a value of 1 for the flex property:
+    div {
+        flex: 1;
+    }
+  would mean a flex-grow value of 1, a flex-shrink value of 1, and a flex-basis value of 0.
